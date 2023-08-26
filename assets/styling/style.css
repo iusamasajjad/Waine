@@ -14,7 +14,9 @@ body {
 .gray-bg {
     background: rgba(31, 44, 46, 0.10);
 }
-
+.bg-purple{
+    background: #472280;
+}
 .pink-bg {
     background: rgba(198, 61, 122, 0.10);
 }
@@ -39,9 +41,9 @@ body {
 .text-blue {
     color: #472280;
 }
-.text-blue{
+/* .text-blue{
     color: #047F8F;
-}
+} */
 .text-darkblue{
     color: #23539C;
 }
@@ -83,7 +85,18 @@ video::-webkit-media-controls-panel {
     background-position: center;
     width: 100%;
 }
-
+.bg-hasboard{
+    background-image: url('../images/UserDashboard-2.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-write-better{
+    background-image: url('../images/patient.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .we-do-bg {
     background-image: url('../images/we-do-bg.png');
     background-position: center;

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/styling/style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Waine</title>
+</head>
+
+<body>
+
+    <div class="bg-hasboard">
+        <div class="bg-gray flex flex-col lg:flex-row">
+            <!-- ==================== mobile-menu =============== -->
+            <!-- Mobile menu button-->
+        <div class=" bg-black py-4 px-5 flex justify-between items-center lg:hidden">
+            <!-- Mobile menu button-->
+            <div>
+                <div>
+                    <li class="w-1/2 flex items-center"><a href=""><img src="./assets/images/logo.png"
+                                alt="cryptoAI"></a></li>
+                </div>
+            </div>
+            <button onclick="menuToggle()" type="button"
+                class="inline-flex items-center justify-center rounded-md p-2 text-white bg-gray-500 hover:bg-gray-500 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <svg class="block h-6 text-white bg-gray-500  w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="">
+                <div class=" text-center mt-4 overlay bg-white" id="mobile-menu">
+                    <a href="javascript:void(0)" onclick="menuClose()"
+                        class="closebtn text-6xl absolute top-4 right-0 mr-10 font-semibold text-black ">&times;</a>
+                    <div class="space-y-1 mt-16 px-2 pt-2 pb-3">
+                        <Header class="h-screen py-8 flex flex-col justify-between">
+                            <nav class="px-5 flex">
+                                <ul class="w-full">
+                                    <li class="pb-10"><a href=""><img class="mx-auto w-1/2" src="./assets/images/logo-blue.png"
+                                                alt="logo"></a>
+                                    </li>
+                                    <div class="bg-light-gray py-3 rounded-xl">
+                                        <div>
+                                            <p class="text-start">Menu</p>
+                                        </div>
+                                        <div class="flex bg-purple rounded-2xl py-3 px-5 items-center">
+                                            <img class="mr-3" src="./assets/images/home.png" alt="home">
+                                            <li class="text-white"><a href="./index.html">Dashboard</a></li>
+                                        </div>
+                                        <div class="flex mt-4 relative py-3 px-5 items-center">
+                                            <img class="mr-3" src="./assets/images/tool.png" alt="home">
+                                            <li class="text-blue"><a href="./seamlessGaming.html">History</a></li>
+                                        </div>
+                                        <div class="flex mt-4 relative py-3 px-5 items-center">
+                                            <img class="mr-3" src="./assets/images/mesg.png" alt="home">
+                                            <li class="text-blue"><a href="./seamlessGaming.html">Chat</a></li>
+                                        </div>
+                                        <div>
+                                            <p class="text-start">Tools</p>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>E-commerce</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Social Media Tools</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Digital Ad Copy</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Big Brainstorming</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Personal Tools</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Copywriting</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Generative AI</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Marketing</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Saas</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>SEO</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Advertorial</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>VSL Copy</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Ebook</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Checkout</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+                                        <div class="flex justify-between py-2 px-5 items-center">
+                                            <li class="text-blue"><a href=""></a>Nucleo da Oferta</li>
+                                            <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                                        </div>
+            
+                                    </div>
+                                </ul>
+                            </nav>
+                        </Header>
+                    </div>
+                </div>
+            </div>
+            <Header class="w-1/5 h-fit hidden bg-white lg:flex py-8 flex flex-col">
+                <nav class="px-5 flex">
+                    <ul class="w-full">
+                        <li class="pb-10"><a href=""><img class="mx-auto w-1/2" src="./assets/images/logo-blue.png"
+                                    alt="logo"></a>
+                        </li>
+                        <div class="bg-light-gray py-3 rounded-xl">
+                            <div>
+                                <p>Menu</p>
+                            </div>
+                            <div class="flex bg-purple rounded-2xl py-3 px-5 items-center">
+                                <img class="mr-3" src="./assets/images/home.png" alt="home">
+                                <li class="text-white"><a href="./index.html">Dashboard</a></li>
+                            </div>
+                            <div class="flex mt-4 relative py-3 px-5 items-center">
+                                <img class="mr-3" src="./assets/images/tool.png" alt="home">
+                                <li class="text-blue"><a href="./seamlessGaming.html">History</a></li>
+                            </div>
+                            <div class="flex mt-4 relative py-3 px-5 items-center">
+                                <img class="mr-3" src="./assets/images/mesg.png" alt="home">
+                                <li class="text-blue"><a href="./seamlessGaming.html">Chat</a></li>
+                            </div>
+                            <div>
+                                <p>Tools</p>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>E-commerce</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Social Media Tools</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Digital Ad Copy</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Big Brainstorming</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Personal Tools</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Copywriting</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Generative AI</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Marketing</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Saas</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>SEO</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Advertorial</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Blog Tools</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>VSL Copy</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Ebook</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Checkout</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+                            <div class="flex justify-between py-2 px-5 items-center">
+                                <li class="text-blue"><a href=""></a>Nucleo da Oferta</li>
+                                <div><img class="w-6" src="./assets/images/mingcute_down-fill.png" alt="home"></div>
+                            </div>
+
+                        </div>
+                    </ul>
+                </nav>
+            </Header>
+
+            <div class="lg:w-4/5 px-4 mx-4 py-8 my-4 rounded-2xl">
+                <div class="flex hidden lg:flex  items-center justify-between">
+                    <div class="px-10 py-2 rounded-lg bg-white flex items-center">
+                        <div><img src="./assets/images/search.png" alt=""></div>
+                        <input class="bg-transparent outline-none w-full text-black ml-3" type="search"
+                            placeholder="search" name="" id="">
+                    </div>
+                    <div class="flex items-center gap-10">
+                        <div>
+                            <img class="w-8" src="./assets/images/circle-flag.png" alt="">
+                        </div>
+                        <div>
+                            <img class="w-8" src="./assets/images/users.png" alt="">
+                        </div>
+                        <div>
+                            <img class="w-8" src="./assets/images/fluent_payment-24-regular.png" alt="">
+                        </div>
+                        <div>
+                            <img class="w-8" src="./assets/images/setting-4.svg" alt="">
+                        </div>
+                        <div>
+                            <img class="w-8" src="./assets/images/notif.png" alt="">
+                        </div>
+                        <div>
+                            <img class="w-12" src="./assets/images/circle-img.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- ========== slots-section ================== -->
+                <div>
+                    <div class="text-white bg-write-better h-full px-5">
+                        <div class="lg:w-4/5 py-7 mt-5">
+                            <div class="mt-5">
+                                <h1 class="text-white font-bold text-2xl pr-4 lg:text-6xl"> <span
+                                        class="text-rgb relative">Write
+                                        Better
+                                        <img class="absolute bottom-1" src="./assets/images/write-beter-underline.png"
+                                            alt="">
+                                    </span>, possibilities with powerful dashboard.
+                                </h1>
+                            </div>
+                            <p class="lg:text-xl py-5 opacity-50 text-gray">Unlock endless creativity and make your
+                                writing
+                                dreams a reality with
+                                our cutting-edge AI technology. Say goodbye to writer's block and hello to endless
+                                inspiration.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex lg:gap-10 gap-3 justify-center flex-wrap">
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/blog.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Blog ideas</h3>
+                                <p class="text-black text-xs opacity-50">Get inspiration for your next blog post with a
+                                    collection of creative blog ideas. Write engaging content with ease.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/bloginfo.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Blog info</h3>
+                                <p class="text-black text-xs opacity-50">Craft a captivating introduction for your blog
+                                    that sets the tone and hooks your readers.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/keygenerater.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Keyword generator</h3>
+                                <p class="text-black text-xs opacity-50">Boost your search engine optimization (SEO) by discovering keywords that are relevant to your content.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/insta.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Instagram captions</h3>
+                                <p class="text-black text-xs opacity-50">Write eye-catching captions for your Instagram posts that engage your followers and improve your visibility.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/hashtag.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Hashtag generator</h3>
+                                <p class="text-black text-xs opacity-50">Discover popular hashtags related to your niche to help your content reach a wider audience.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/copy.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Ad copy variants</h3>
+                                <p class="text-black text-xs opacity-50">Create multiple variations of your ad copy to test and optimize the performance of your advertising campaigns.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/product.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Product description</h3>
+                                <p class="text-black text-xs opacity-50">Create compelling product descriptions that highlight the features and benefits of your offerings.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/youtube.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">YouTube video ideas</h3>
+                                <p class="text-black text-xs opacity-50">Generate ideas for your next YouTube video, from vlogs to tutorials to unboxings.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/general.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">General Ad copy</h3>
+                                <p class="text-black text-xs opacity-50">Write persuasive ad copy that converts potential customers into paying customers.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/namegenerater.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Name generator</h3>
+                                <p class="text-black text-xs opacity-50">Find unique and memorable names for your business, product, or brand.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/blog.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Blog ideas</h3>
+                                <p class="text-black text-xs opacity-50">Get inspiration for your next blog post with a
+                                    collection of creative blog ideas. Write engaging content with ease.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/brand.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Startup ideas</h3>
+                                <p class="text-black text-xs opacity-50">Get inspired and explore new business opportunities with a collection of innovative startup ideas.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/loveletter.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Love letter</h3>
+                                <p class="text-black text-xs opacity-50">Write a heartfelt love letter to express your feelings to your significant other.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/coverlater.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Cover letter</h3>
+                                <p class="text-black text-xs opacity-50">Write a compelling cover letter that showcases your skills and lands you your dream job.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/blog.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Blog post title</h3>
+                                <p class="text-black text-xs opacity-50">Generate post titles with for specific keywords.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white mt-5 py-5 flex flex-col justify-center items-center lg:w-1/5 w-2/5 rounded-2xl">
+                            <img class="w-20" src="./assets/images/flower.png" alt="">
+                            <div class="px-2 text-center py-2">
+                                <h3 class="text-lg text-black">Midjourney prompts</h3>
+                                <p class="text-black text-xs opacity-50">Outputs four extremely detailed Midjourney prompts for your keyword.</p>
+                            </div>
+                            <div class="w-full px-2">
+                                <button class="bg-blue-900 rounded-3xl py-1 text-white w-full">Try Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./assets/script/script.js"></script>
+</body>
+
+</html>
